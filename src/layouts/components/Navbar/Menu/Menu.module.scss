@@ -1,0 +1,197 @@
+@import 'src/components/GlobalStyles/_mixin.scss';
+
+.mobile-overlay {
+  @include medium-devices {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #a3a3a3;
+
+  @include medium-devices {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    box-shadow: 1px 1px 5px #ccc;
+    height: 100vh;
+    display: block;
+    transform: translateX(calc(-100% - 40px));
+    border: none;
+    transition: 0.3s ease-in-out;
+    background-color: var(--white-color);
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+}
+
+.menu-mobile-header {
+  display: none;
+  list-style: none;
+  border-bottom: 1px solid rgba(45, 45, 45, 0.1);
+
+  @include medium-devices {
+    display: flex;
+  }
+}
+
+.menu-mobile-header-item {
+  width: 50%;
+  & a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #999;
+    letter-spacing: 2px;
+    background-color: #fff;
+    border: none;
+    text-transform: uppercase;
+
+    &.active {
+      color: #2d2d2d;
+      border-bottom: 2px solid #2d2d2d;
+    }
+  }
+}
+
+.menu-list {
+  position: relative;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  border-top: 1px solid #a3a3a3;
+
+  @include medium-devices {
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    border: none;
+  }
+}
+
+.menu-item {
+  position: relative;
+
+  &:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    margin: 0px 0 0;
+  }
+
+  &.has-mega {
+    position: static;
+  }
+
+  @include medium-devices {
+    margin: 4px 0;
+  }
+}
+
+.menu-link {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: var(--white-color);
+  padding: 16px 20px;
+  font-family: PNBold;
+  display: block;
+
+  &.hot {
+    color: red;
+  }
+
+  @include medium-devices {
+    color: #2d2d2d !important;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #efefef;
+    padding: 0 0 0 8px;
+
+    &:not(.has-thumb) {
+      display: block;
+      font-size: 16px;
+      padding: 0 15px;
+      border-bottom: 1px solid #e9e9e9;
+      line-height: 38px;
+      background-color: var(--white-color);
+      text-transform: capitalize;
+      font-family: PN;
+      color: #000 !important;
+    }
+  }
+}
+
+.menu-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobile-thumbnail {
+  & img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    display: none;
+
+    @include medium-devices {
+      display: block;
+    }
+  }
+}
+
+.menu-icon {
+  display: block;
+  font-size: 1.2rem;
+
+  @include medium-devices {
+    & {
+      display: none;
+    }
+  }
+}
+
+.mobile-icon {
+  display: none;
+
+  @include medium-devices {
+    display: block;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbae40;
+
+  @include medium-devices {
+    display: flex;
+  }
+}
+
+.close-icon {
+  font-size: 2.2rem;
+  color: var(--white-color);
+}

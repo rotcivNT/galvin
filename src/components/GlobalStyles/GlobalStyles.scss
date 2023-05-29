@@ -1,0 +1,150 @@
+@import './_mixin.scss';
+
+:root {
+  --header-color: #343631;
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: PNBold;
+}
+
+.container {
+  width: 1170px;
+  margin: 40px auto;
+  padding: 0 15px;
+
+  @include large-devices {
+    width: 960px;
+  }
+  @include medium-devices {
+    width: 720px;
+  }
+  @include small-devices {
+    width: 540px;
+  }
+}
+
+.row {
+  display: flex;
+  margin: 0 -15px;
+}
+
+.l-3,
+.l-4,
+.l-9 {
+  padding: 0 15px;
+}
+
+.col.l-3 {
+  width: 25%;
+  flex-basis: 25%;
+}
+
+.col.l-9 {
+  width: 75%;
+  flex-basis: 75%;
+}
+
+.col.l-4 {
+  flex-basis: 33.33333%;
+  width: 33.33333%;
+}
+
+// Customize antd -> input error
+:where(.css-dev-only-do-not-override-9ntgx0).ant-form-inline
+  .ant-form-item-with-help {
+  margin-bottom: 0 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+// Customize DOTS Carousel Antd
+:where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-dots-bottom {
+  bottom: 20px;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover {
+  font-size: inherit;
+  color: currentColor;
+}
+
+.slick-dots.slick-dots-bottom li {
+  width: 15px !important;
+  height: 15px;
+  & button {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--white-color);
+  }
+}
+
+:where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-prev,
+:where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-next {
+  transform: translateY(calc(-50% - 20px));
+  font-size: 2.8rem !important;
+  width: unset;
+  height: unset;
+  padding: 8px;
+  border: 1px solid var(--black-color) !important;
+  background-color: var(--white-color) !important;
+  z-index: 999999;
+}
+
+:where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-prev::before,
+:where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-next::before {
+  display: none !important;
+}
+
+// Font family
+@font-face {
+  font-family: PN;
+  src: url('../../assets/fonts/pn-regular2.ttf');
+}
+
+@font-face {
+  font-family: PNBold;
+  src: url('../../assets/fonts/pn_semibold_gdi.ttf');
+}
+
+@font-face {
+  font-family: FaLight;
+  src: url('../../assets/fonts/fa-light-300.woff2');
+}
+
+@font-face {
+  font-family: FaRegular;
+  src: url('../../assets/fonts/fa-regular-400.woff2');
+}
+
+@font-face {
+  font-family: FaSolid;
+  src: url('../../assets/fonts/fa-solid-900.woff2');
+}
+
+@font-face {
+  font-family: SVN;
+  src: url('../../assets/fonts/svn-veneer.woff');
+}

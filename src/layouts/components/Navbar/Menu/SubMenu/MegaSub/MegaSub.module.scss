@@ -1,0 +1,70 @@
+.mega {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99999;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  background-color: #eee;
+  margin: 20px 0 0;
+  transition: ease-in-out 0.2s;
+  display: flex;
+  box-shadow: 0px 0px 20px 0px rgb(0 0 6 / 5%);
+  padding: 15px;
+  border-bottom: 1px solid #707070;
+  border-left: 1px solid #707070;
+  border-right: 1px solid #707070;
+}
+
+.left-content {
+  width: 25%;
+  border-right: 1px solid #ccc;
+  padding-right: 15px;
+}
+
+.title {
+  border-bottom: 1px solid #333;
+  font-size: 1.5rem;
+  color: #2d2d2d;
+  text-transform: uppercase;
+}
+
+.menu-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+
+  & img {
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+  }
+}
+
+.menu-link {
+  text-decoration: none;
+  transition: linear 0.15s;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid transparent;
+  font-size: 1.4rem;
+  color: var(--black-color);
+  text-transform: uppercase;
+  font-family: PN;
+  padding: 8px 0;
+
+  &:hover {
+    color: #fcce6f;
+  }
+}
+
+.mega-product {
+  width: 25%;
+  margin-left: 20px;
+}

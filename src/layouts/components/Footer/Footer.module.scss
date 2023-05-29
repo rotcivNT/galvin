@@ -1,0 +1,127 @@
+@import 'src/components/GlobalStyles/_mixin.scss';
+
+.wrapper {
+  background-color: #343631;
+  padding: 30px 0;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include large-devices {
+    width: 960px;
+  }
+  @include medium-devices {
+    width: 720px;
+  }
+  @include small-devices {
+    width: 540px;
+  }
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  & img {
+    width: 100%;
+    display: inline-block;
+
+    @include small-devices {
+      width: 263px;
+    }
+  }
+}
+
+.footer-logo,
+.footer-contact {
+  width: 25%;
+
+  @include small-devices {
+    width: 100%;
+  }
+}
+
+.footer-contact-item {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 0 15px;
+
+  & p {
+    padding-left: 15px;
+    font-family: PN;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    line-height: 1.5;
+    & span {
+      display: block;
+    }
+
+    & a {
+      color: #f1c40f;
+      font-family: PNBold;
+      font-style: italic;
+    }
+  }
+
+  @include small-devices {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 10px;
+  }
+}
+
+.footer-icon {
+  color: var(--white-color);
+  font-size: 5rem;
+  display: block;
+  max-width: 25px;
+  transform: translateY(-25%);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-payment {
+  margin: 25px 0;
+
+  & img {
+    display: inline-block;
+  }
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-menu-item {
+  &:not(:last-child) {
+    border-right: 1px solid #999;
+  }
+
+  & a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: PN;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 15px;
+  }
+}
+
+.footer-cpy-right {
+  font-size: 1.4rem;
+  color: var(--white-color);
+  font-family: PN;
+}

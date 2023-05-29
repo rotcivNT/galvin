@@ -1,0 +1,30 @@
+@import 'src/components/GlobalStyles/_mixin.scss';
+
+.wrapper {
+  width: 500px;
+
+  @include medium-devices {
+    display: none;
+  }
+}
+
+.container {
+  width: 400px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 1.9rem;
+  cursor: pointer;
+}

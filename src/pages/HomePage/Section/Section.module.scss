@@ -1,0 +1,204 @@
+@import 'src/components/GlobalStyles/_mixin.scss';
+
+.policy {
+  width: 980px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #d5d4d4;
+  border-radius: 8px;
+  margin: 0 auto;
+
+  @include medium-devices {
+    width: 720px;
+    border-color: transparent;
+    padding: 0;
+  }
+
+  @include small-devices {
+    width: 540px;
+  }
+}
+
+.policy-item {
+  text-align: center;
+  padding: 10px 5px;
+
+  @include medium-devices {
+    width: 100%;
+    border: 1px solid #d5d4d4;
+    border-radius: 8px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  & img {
+    width: 35px;
+  }
+
+  & p {
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-family: PN;
+
+    @include medium-devices {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.container {
+  width: 1170px;
+  margin: 40px auto;
+  padding: 0 15px;
+
+  @include large-devices {
+    width: 960px;
+  }
+  @include medium-devices {
+    width: 720px;
+  }
+  @include small-devices {
+    width: 540px;
+  }
+}
+
+.flashsale-heading {
+  position: relative;
+  & img {
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+  }
+}
+
+.flashsale-btn-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+
+.flashsale-btn {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--white-color);
+  font-family: PN;
+}
+
+.product-list-section {
+  margin: 15px -5px 0 -5px;
+}
+
+// Home Banner
+.banner-list {
+  display: flex;
+}
+
+.banner-item {
+  width: 50%;
+  padding: 0 10px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+
+  & img {
+    display: inline-block;
+    width: 100%;
+    transition: ease-in-out 2s;
+  }
+
+  &:hover .banner-info p:last-child::after {
+    width: 100%;
+  }
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+
+.image-banner {
+  overflow: hidden;
+}
+
+.banner-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  & p:last-child {
+    font-family: PN;
+    font-size: 1.6rem;
+    letter-spacing: 0.8px;
+    display: inline-block;
+    margin-top: 8px;
+    position: relative;
+    color: var(--white-color);
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--white-color);
+      transition: ease-in-out 0.3s;
+    }
+  }
+}
+
+.banner-title {
+  color: var(--white-color);
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+// New Product
+
+.title-section {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+
+  & span {
+    display: inline-block;
+    font-family: SVN;
+    font-size: 4rem;
+    color: var(--black-color);
+    text-align: center;
+    padding-bottom: 4px;
+    border-bottom: 3px solid #3a3a3a;
+  }
+}
+
+.new-product-btn {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.home-article-content {
+  text-align: center;
+  span {
+    font-size: 1.4rem;
+    font-family: PN;
+  }
+}
+
+// Brand
+.home-brand-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  & li {
+    flex: 1;
+
+    & img {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+}

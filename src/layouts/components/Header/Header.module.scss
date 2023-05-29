@@ -1,0 +1,122 @@
+@import 'src/components/GlobalStyles/_mixin.scss';
+
+.wrapper {
+  background-color: var(--header-color);
+  position: sticky;
+  top: 0;
+  z-index: 99999999;
+}
+
+.header-top {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include large-devices {
+    width: 960px;
+  }
+
+  @include medium-devices {
+    width: 660px;
+    height: 50px;
+    justify-content: unset;
+  }
+
+  @include small-devices {
+    width: 100%;
+  }
+}
+
+.header-menu-icon {
+  display: none;
+  font-size: 3rem;
+  color: var(--white-color);
+
+  @include medium-devices {
+    display: block;
+    margin-right: 30px;
+  }
+}
+
+.logo {
+  @include medium-devices {
+    flex: 1;
+  }
+
+  & img {
+    width: 180px;
+    display: block;
+  }
+}
+
+.header-link {
+  --active: #514f4f;
+  position: relative;
+  left: -20px;
+
+  @include medium-devices {
+    display: none;
+  }
+  & a {
+    text-decoration: none;
+    color: var(--white-color);
+    text-transform: uppercase;
+    padding: 17px 0;
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+    transition: 0.15s linear;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    &:hover {
+      background-color: var(--active);
+    }
+
+    &.active {
+      background-color: var(--active);
+    }
+  }
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+}
+
+.promotion {
+  font-size: 1.4rem;
+  color: var(--white-color);
+  font-family: PN;
+  margin-right: 6px;
+
+  @include medium-devices {
+    display: none;
+  }
+
+  @include large-devices {
+    display: none;
+  }
+}
+
+.action {
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  & a {
+    display: block;
+    margin: 0 2px;
+  }
+}
+
+.action-icon {
+  font-size: 2.6rem;
+  color: var(--white-color);
+
+  @include medium-devices {
+    font-size: 3rem;
+  }
+}
